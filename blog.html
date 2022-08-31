@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Indianaweb.blogspot</title>
+ <style type="text/css">
+  body {
+   padding: 10px 400px;
+  }
+ 
+  .button-container {
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   background: #fff;
+   border: 1px solid #ccc;
+   padding: 10px;
+  }
+ </style>
+</head>
+<body>
+<h2 id="top">JavaScript</h2>
+<p>
+Lorem Ipsum is simply dummy text of the printing and typesetting industr
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+when an unknown printer took a galley of type and scrambled it to make a type
+specimen book. It has
+</p>
+<p id="test">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500
+when an unknown printer took a galley of type and scrambled it to make a type 
+specimen book. It has
+</p>
+<h2>Beginnings at Netscape</h2>
+<p>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+Lorem Ipsum has been the industry's standard dummy text ever since the 150
+when an unknown printer took a galley of type and scrambled it to make a type
+specimen book. It has
+</p>
+<p>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+when an unknown printer took a galley of type and scrambled it to make a type 
+specimen book. It has
+</p>
+ 
+ <div class="button-container">
+  <button onclick="scrollToBottom();">Scroll to Bottom</button>
+  <button onclick="scrollByUnits();">Scroll by 300</button>
+  <button onclick="scrollToElement();">Scroll to Element</button>
+  <button onclick="scrollToTop();">Scroll to top</button>
+ </div>
+ 
+ <script type="text/javascript">
+  function scrollToBottom() {
+   window.scroll({
+    top: document.body.scrollHeight,
+    left: 0,
+    behavior: 'smooth'
+   });
+  };
+ 
+  function scrollByUnits() {
+   window.scrollBy({
+    top: 300,
+    left: 0,
+    behavior: 'smooth'
+   });
+  };
+ 
+  function scrollToElement() {
+   document.querySelector('#test').scrollIntoView({
+    behavior: 'smooth'
+   });
+  };
+ 
+  function scrollToTop() {
+   document.querySelector('#top').scrollIntoView({
+    behavior: 'smooth'
+   });
+  };
+ </script>
+ 
+</body>
+</html>
